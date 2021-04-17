@@ -846,7 +846,7 @@ bool Test5(int **arrd) {
 			entered_arr[i][j] = entered_data[i][j];
 		}
 	}
-
+	
 	int expected_result[line][column] = { {86, 82, 95, - 95, 78, - 50, - 33, - 70, 91, - 84 },
 											{-86, 75, 61, 41, - 53, 47, 23, - 41, - 84, 58 },
 											{-22, - 32, 34, - 22, - 47, 34, 9, - 7, 2, - 34 } };
