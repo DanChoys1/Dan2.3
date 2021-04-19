@@ -200,7 +200,7 @@ Array RondomInput::Read() {
 	return arr;
 }
 
-Input *InputType(bool *user_selected_file_input) {
+unique_ptr<Input> InputType(bool *user_selected_file_input) {
 int choice = 0;
 
 do {
@@ -209,19 +209,16 @@ do {
 
 	if (choice == CHOICE_KEYBOARD) {
 
-		KeyboardInput *keyboard_iput = new KeyboardInput;
-		return keyboard_iput;
+		return unique_ptr<KeyboardInput>(new KeyboardInput);
 
 	} else if (choice == CHOICE_FILE) {
 
 		*user_selected_file_input = true;
-		FileInput *file_input = new FileInput;
-		return file_input;
+		return unique_ptr<FileInput>(new FileInput);
 
 	} else if (choice == CHOICE_RANDOM) {
 
-		RondomInput *rondom_input = new RondomInput;
-		return rondom_input;
+		return unique_ptr<RondomInput>(new RondomInput);
 
 	} else {
 

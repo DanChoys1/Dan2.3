@@ -40,4 +40,6 @@ public:
 
 	Array & operator = (Array&& old_array);
 
+	Array & operator = (Array& old_array) = delete;
+
 };

@@ -6,17 +6,15 @@
 
 using namespace std;
 
-Input *InputType(bool *user_selected_file_input);
+unique_ptr<Input> InputType(bool *user_selected_file_input);
 
 void ArrayInterface(void) {
 	bool user_selected_file_input = false;
 
-	Input* inp = InputType(&user_selected_file_input);
+	unique_ptr<Input> inp = InputType(&user_selected_file_input);
 
 	Array arr = inp->Read();
-
-	delete inp;
-
+	
 	cout << "Input array:" << endl;
 	arr.Print();
 
