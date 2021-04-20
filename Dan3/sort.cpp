@@ -97,9 +97,9 @@ Array Insertion_Sort::Sort(Array arr) {
 Array Shell_Sort::Sort(Array arr) {
 
 	for (int j = 0; j < arr.GetColumn(); j++) {
-		int d = static_cast<int>(round(arr.GetLine() / 2.0));
+		int d = arr.GetLine() / 2;
 
-		while (true) {
+		while (d != 0) {
 
 			for (int k = d; k < arr.GetLine(); k++) {
 
@@ -115,11 +115,7 @@ Array Shell_Sort::Sort(Array arr) {
 
 			}
 
-			if (d <= 1) {
-				break;
-			} else {
-				d = static_cast<int>(round(d / 2.0)); 
-			}
+			d /= 2; 
 
 		}
 
