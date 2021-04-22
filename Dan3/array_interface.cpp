@@ -29,7 +29,8 @@ void ArrayInterface(void) {
 
 	Shell_Sort shell_sort;
 	Array arr_shell_sort = shell_sort.Sort(arr);
-
+	cout << endl;
+	arr_shell_sort.Print();
 	Quick_Sort quick_sort;
 	Array arr_quick_sort = quick_sort.Sort(arr);
 

@@ -109,6 +109,10 @@ Array Shell_Sort::Sort(Array arr) {
 						swap(arr[i][j], arr[i - d][j]);
 						permutation++;
 					}
+					else {
+						comparison++;
+						break;
+					}
 
 					comparison++;
 				}
